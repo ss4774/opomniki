@@ -28,4 +28,22 @@ window.addEventListener('load', function() {
 	}	
 	document.querySelector("#prijavniGumb").addEventListener('click', prijavi);
 	
+		
+	var dodajOpomnik = function(event){
+		var naziv = document.querySelector("#naziv_opomnika").value;
+		var casTrajanja =  document.querySelector("#cas_opomnika").value;
+		
+		document.querySelector("#naziv_opomnika").value = "";
+		document.querySelector("#cas_opomnika").value = "";
+		
+		document.querySelector("#opomniki").innerHTML = `	
+				<div class='opomnik'>
+	            	<div class='naziv_opomnika'>NAZIV_OPOMNIKA</div>
+	            	<div class='cas_opomnika'> Opomnik čez <span>CAS_OPOMNIKA</span> sekund.</div>
+				</div>
+				`;
+		
+	}
+	document.querySelector("#dodajGumb").addEventListener('click', dodajOpomnik);
+	
 })
