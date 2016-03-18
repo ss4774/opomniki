@@ -45,5 +45,6 @@ window.addEventListener('load', function() {
 		
 	}
 	document.querySelector("#dodajGumb").addEventListener('click', dodajOpomnik);
+	//test
 	
 })
